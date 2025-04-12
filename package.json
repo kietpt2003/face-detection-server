@@ -1,0 +1,21 @@
+{
+  "name": "FaceDetectorServer",
+  "version": "1.0.0",
+  "description": "Face Detector Server",
+  "main": "index.js",
+  "author": "Tuan Kiet",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
