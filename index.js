@@ -154,6 +154,7 @@ app.get('/faces', async (req, res) => {
     const faces = await db
       .collection('face')
       .find()
+      .sort({ _id: -1 })
       .skip(skip)
       .limit(limit)
       .toArray();
