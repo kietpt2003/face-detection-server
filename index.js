@@ -31,7 +31,7 @@ async function connectDB() {
   }
 }
 
-app.use(express.json({ limit: '10mb' }));
+app.use(express.json({ limit: '30mb' }));
 
 app.post('/face', async (req, res) => {
   try {
