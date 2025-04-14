@@ -24,8 +24,7 @@ let db;
 async function connectDB() {
   try {
     await client.connect();
-    db = client.db("FaceDetection"); // 🧠 Tên database bạn muốn dùng
-    console.log("✅ Connected to MongoDB!");
+    db = client.db("FaceDetection");
   } catch (err) {
     console.error("❌ MongoDB connection error:", err);
   }
@@ -35,7 +34,6 @@ app.use(express.json({ limit: '30mb' }));
 
 app.post('/face', async (req, res) => {
   try {
-    console.log("📥 Received face data:", req.body);
     const centerFaceData = req.body.centerFaceData;
     const leftFaceData = req.body.leftFaceData;
     const rightFaceData = req.body.rightFaceData;
